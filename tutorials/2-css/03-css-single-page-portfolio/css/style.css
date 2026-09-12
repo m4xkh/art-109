@@ -13,10 +13,11 @@ html {
 
 /* General CSS */
 body {
-    background-color: lavender;
+    background-color: rgb(198, 198, 242);
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5rem;
     line-height: 1.5;
+    padding: 1rem;
 }
 
 header {
@@ -25,10 +26,51 @@ header {
     background-color: rgb(244, 214, 244);
     color: #473c55;
     border-bottom: #473c55 2px dashed;
-    /* text-align: center; */
+    /* text-align: right;    */
 }
 
 header h1 {
     font-size: 4rem;
+}
+
+/* main {
+    margin: 2rem auto;
+    max-width: 60rem;
+
+} */
+
+.about-section,
+.portfolio-section,
+.contact-section,
+.footer-section {
+    margin-bottom: 4rem;
+
+}
+
+ .about-section,
+.portfolio-section,
+.contact-content {
+    margin: 2rem auto;
+    max-width: 60rem;
+
+} 
+
+.portfolio-item {
+    margin-bottom: 2rem;
+    padding: 4rem;
+    text-align: justify;
+}
+
+.portfolio-item img {
+    max-width: 65%;
+    margin: 0 left;
+    display: block;
+}
+.about-section {
+    background-color: lightblue;
+}
+
+.portfolio-section {
+    background-color: rgb(194, 174, 146);
 
 }
