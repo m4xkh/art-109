@@ -1,4 +1,26 @@
-/* CSS resets */
+/* ======[color pallete]====== */
+
+
+
+:root {
+    --bg-color-1: #c6c6f2;
+    --bg-color-2: #f4d6f4;
+    --bg-color-3: #def2f8;
+    --font: #473c55;
+    --accent-1: #d1629a;
+    --accent-2: #f4d6f4;
+    --accent-3: #c6c6f2;
+    --dark: #473c55;
+}
+
+
+
+
+
+
+
+
+/* ======[CSS resets]====== */
 
 * {
     margin: 0;
@@ -8,13 +30,15 @@
 /* respect user font preferences */
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
     /* 1 rem = 16px */
 }
 
 /* General CSS */
 body {
-    background-color: rgb(198, 198, 242);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-family: 'Courier New', Courier, monospace, "Bodoni Moda", serif;
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 1rem;
@@ -23,22 +47,30 @@ body {
 header {
     padding: 3rem 1rem 4rem 5rem;
     margin-bottom: 3rem;
-    background-color: #f4d6f4;
-    color: #473c55;
-    border-bottom: #473c55 2px dashed;
+    background-color: var(--bg-color-2);
+    color: var(--font);
+    border-bottom: var(--dark) 2px dashed;
     /* text-align: right;    */
 }
 
 header h1 {
     font-size: 4rem;
+    text-decoration: line-through;
+    text-decoration-style: solid;
+    text-decoration-color: var(--bg-color-2);
+    /* font-family: "Courier Prime", monospace; */
 }
 
-/* main {
-  
-    max-width: 60rem;
- margin: 2rem auto;
+h2 {
+    display: inline-block;
+    background-color: var(--accent-1);
+    border-radius: 0.3rem;
+    margin: -0.3rem 0.5rem;
+    font-family: "Courier Prime", monospace;
+    
+}
 
-} */
+
 
 nav {
     position: fixed;
@@ -48,13 +80,33 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #473c55;
-    display:inline-block;
+    color: var(--font);
+    display: inline-block;
     margin: 0.5rem 1rem;
+    transition: all 0.1s ease-out;
 }
 
-.footer-section a {
-    text-decoration: none;
+nav a:hover {
+    background-color: var(--bg-color-2);
+    color: var(--accent-1);
+    transform: scale(0.9);
+    transform: rotate('45deg');
+}
+
+main {
+  
+margin: 0;
+
+}
+@media (max-width: 700px){
+    main {
+        margin: 3rem;
+    }
+}
+@media (max-width: 450px){
+    main {
+        margin: 1rem;
+    }
 }
 
 .about-section,
@@ -73,11 +125,21 @@ nav a {
     padding: 4rem;
     text-align: justify;
     border-radius: 1rem;
-    border: #473c55 2px dashed;
-    background-color: #f4d6f4;
-    box-shadow: 1rem 0.75rem 0px 0px rgba(71, 60, 85, 0.75);
+    border: var(--dark) 2px dashed;
+    background-color: var(--bg-color-2);
+    box-shadow: 1rem 0.75rem 0px 0px var(--dark);
 }
 
+@media (max-width: 700px){
+    .portfolio-item {
+        padding: 2rem;
+    }
+}
+@media (max-width: 450px){
+    .portfolio-item {
+        padding: 0.5rem;
+    }
+}
 .portfolio-item img {
     max-width: 100%;
     margin: 0 left;
@@ -88,6 +150,7 @@ nav a {
 
 .portfolio-item h3 {
     margin: 1rem 0;
+    font-family: "Courier Prime", monospace;
 }
 
 .portfolio-item p {
@@ -95,11 +158,82 @@ nav a {
 
 }
 
+
 .about-section {
-    background-color: lightblue;
+    background-color: var(--bg-color-3);
+    border-radius: 2rem;
+}
+
+.about-content {
+
+    color: var(--accent-3);
 }
 
 .portfolio-section {
-    background-color: rgb(229, 212, 188);
+    background-color: var(--bg-color-3);
+    border-radius: 2rem;
 
 }
+
+.footer-section {
+    background-color: var(--dark);
+    color: var(--bg-color-2)
+}
+
+.footer-section a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--dark);
+    color: var(--bg-color-2);
+    transition: all 0.1s ease-out;
+}
+
+.footer-section a:hover {
+    transform: scale(0.9);
+    background-color: var(--accent-2);
+    color: var(--accent-1);
+
+}
+
+/* ======[style classes]======= */
+
+
+.accent-1 {
+    color: var(--accent-1);
+}
+
+.accent-2 {
+    color: var(--accent-2);
+}
+
+.accent-3 {
+    color: var(--accent-3);
+}
+
+/* ======[fonts]====== */
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
