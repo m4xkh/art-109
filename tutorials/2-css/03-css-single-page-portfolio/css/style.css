@@ -59,7 +59,12 @@ header {
     border-bottom: var(--dark) 2px dashed;
     /* text-align: right;    */
 }
-
+@media (max-width: 925px) {
+    header {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+}
 header h1 {
     font-size: 4rem;
     text-decoration: line-through;
