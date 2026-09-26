@@ -1,0 +1,82 @@
+/* ======[color pallete]====== */
+
+
+
+:root {
+    --bg-color-1: #473c55;
+    --bg-color-2: #f4d6f4;
+    --bg-color-3: #def2f8;
+    --font: #f4d6f4;
+    --accent-1: #d1629a;
+    --accent-2: #f4d6f4;
+    --accent-3: #c6c6f2;
+    --dark: #473c55;
+}
+
+
+
+
+
+
+
+
+/* ======[CSS resets]====== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font preferences */
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    /* 1 rem = 16px */
+}
+
+/* General CSS */
+
+body {
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+
+/* responsive images */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    padding: 4rem, 2rem;
+    margin: 2rem;
+
+}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+
+    max-width: 60rem;
+    margin: 5rem auto;
+
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact.content h2 {
+    margin: 2rem 0;
+}
+
+
+footer {
+
+    padding: 1rem, 2rem;
+    margin-left: 2rem;
+}
