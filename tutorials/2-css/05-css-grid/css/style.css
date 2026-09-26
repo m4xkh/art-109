@@ -5,7 +5,7 @@
 :root {
     --bg-color-1: #473c55;
     --bg-color-2: #f4d6f4;
-    --bg-color-3: #def2f8;
+    --bg-color-3: #c6c6f2;
     --font: #f4d6f4;
     --accent-1: #d1629a;
     --accent-2: #f4d6f4;
@@ -25,6 +25,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* respect user font preferences */
@@ -42,7 +43,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
-
+    text-align: left;
 
 }
 
@@ -56,6 +57,51 @@ img {
 header {
     padding: 4rem, 2rem;
     margin: 2rem;
+    margin-bottom: 7rem;
+
+}
+
+header h1{
+text-shadow: -5px 5px 0px #d1629acc, -10px 10px 0px #d1629a99, -15px 15px 0px #d1629a44;
+}
+nav a, footer a {
+text-decoration: none;
+color: var(--font);
+/* transition: all .5s ease; */
+
+}
+
+nav a:hover, footer a:hover {
+
+    color: var(--accent-1);
+}
+.navbar {
+    display:flex;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+main {
+    margin:0;
+}
+@media (max-width: 1030px) {
+    main {
+        margin: 2rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+    main {
+        margin: 1rem;
+    }
 
 }
 
@@ -64,7 +110,7 @@ header {
 .contact-section {
 
     max-width: 60rem;
-    margin: 5rem auto;
+    margin: 0 auto 5rem auto;
 
 }
 
@@ -74,9 +120,55 @@ header {
     margin: 2rem 0;
 }
 
+.portfolio-item {
+    padding: 1rem;
+    background-color: var(--bg-color-3);
+    color: var(--bg-color-1);
+    border-radius: .2rem;
+}
 
+.portfolio-item p {
+    font-size:1rem;
+}
+
+.portfolio-item h3 {
+    font-size:1.3rem;
+}
+
+.portfolio-item img {
+    border-radius: 0.2rem;
+}
 footer {
 
     padding: 1rem, 2rem;
     margin-left: 2rem;
+}
+
+footer img {
+display: inline;
+max-width: 3rem;
+margin: 0.5rem;
+}
+
+/* ======[flex styling]====== */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content:center;
+    /* align-items: flex-end; */
+
+}
+
+.flex-item-grid {
+    /* grow shrink basis */
+    flex: 1 0 18rem;
+    padding: 1rem;
+/* box-sizing: border-box; */
 }
