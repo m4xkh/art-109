@@ -61,3 +61,31 @@ main {
     max-width: 60rem;
     margin: 0 auto;
 }
+
+img {
+    width: 20rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#img1 {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+#img2 {
+    position: absolute;
+    top: 20rem;
+    left: 3rem;
+}
+
+#img3 {
+    position: absolute;
+    top: 30rem;
+    left: 32rem;
+}
+
