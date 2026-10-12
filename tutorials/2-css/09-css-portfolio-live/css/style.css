@@ -82,6 +82,7 @@ footer a:hover {
 }
 
 .navbar {
+    /* position:relative; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,13 +183,13 @@ main {
     padding: 2rem;
 }
 
-.project-content a  {
+.project-content a, .about-content a  {
     text-decoration: none;
     color: var(--accent-1);
 }
 
-.project-content a:hover {
-    background-color: var(--accent-1);
+.project-content a:hover, .about-content a:hover {
+    background-color: var(--font);
     color: var(--bg-color-1);
 }
 
