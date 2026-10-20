@@ -3,7 +3,7 @@
 
 
 :root {
-    --bg-color-1: #473c55;
+    --bg-color-1: #463b54;
     --bg-color-2: #f4d6f4;
     --bg-color-3: #c6c6f2;
     --font: #f4d6f4;
@@ -82,6 +82,7 @@ footer a:hover {
 }
 
 .navbar {
+    /* position:relative; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,13 +183,13 @@ main {
     padding: 2rem;
 }
 
-.project-content a  {
+.project-content a, .about-content a  {
     text-decoration: none;
     color: var(--accent-1);
 }
 
-.project-content a:hover {
-    background-color: var(--accent-1);
+.project-content a:hover, .about-content a:hover {
+    background-color: var(--font);
     color: var(--bg-color-1);
 }
 
