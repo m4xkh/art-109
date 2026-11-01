@@ -1,12 +1,12 @@
+//cipher block elements input list
 const utfKeys = [
     "▀", "▁", "▂", "▃", "▄", "▅", "▆", "▇",
     "█", "▉", "▊", "▋", "▌", "▍", "▎", "▏",
     "▐", "░", "▒", "▔", "▕", "▙", "▚", "▛",
-    "▜", "▟"
+    "▜", "▟","%"
 ];
 
 document.querySelectorAll(".slot").forEach(slot => {
-    slot.add(new Option("", ""));
     utfKeys.forEach(key => slot.add(new Option(key, key)));
     slot.addEventListener("change", () => {
         updateOptions();
@@ -14,6 +14,7 @@ document.querySelectorAll(".slot").forEach(slot => {
     });
 });
 
+//changes the cipher text to be what is inputted into the qwerty layout
 function updateCipher() {
     const mapping = {};
 
@@ -31,6 +32,7 @@ function updateCipher() {
     });
 }
 
+//disables options to select the same letter twice in the dropdown box
 function updateOptions() {
     const slots = document.querySelectorAll(".slot");
     const selected = [...slots].map(slot => slot.value);
