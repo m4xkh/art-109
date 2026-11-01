@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+
+    background: var(--background-color);
+    color: black;
+}
+
+#ciphertext {
+    width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ciphertext .line {
+    width: 100%;
+    text-align: left;
+}
+
+#slots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.slot-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.slot-row:nth-child(2) {
+    padding-left: 1rem;
+}
+
+.slot-row:nth-child(3) {
+    padding-left: 2rem;
+}
