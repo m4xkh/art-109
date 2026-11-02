@@ -33,6 +33,11 @@ body {
 
 }
 
+img {
+    display: inline-block;
+    max-width: 7%;
+    padding-left: 0.5rem;
+}
 header {
     /* position: absolute; */
     padding: 4rem, 2rem;
@@ -117,6 +122,8 @@ footer legend {
     margin-left: 2rem;
     max-width: 30vw;
 }
+
+
 
 @media (max-width: 440px) {
     select {
