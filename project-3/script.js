@@ -24,6 +24,10 @@ function updateCipher() {
     });
 
 
+    //define any text put in html class as "original" in the stored dataset for the dictionary function
+    document.querySelectorAll(".line").forEach(line => {
+        line.dataset.original = line.textContent;
+    });
 //replace the original ciphertext with the defined value in the dictionary
     document.querySelectorAll(".line").forEach(line => {
         let result = "";

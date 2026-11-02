@@ -1,0 +1,110 @@
+
+/* ======[CSS resets]====== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-transform: lowercase;
+}
+
+/* respect user font preferences */
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    /* 1 rem = 16px */
+}
+
+
+
+
+body {
+    height: 100vh;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1rem;
+    background: var(--background-color);
+    color: black;
+
+
+}
+
+header {
+    /* position: absolute; */
+    padding: 4rem, 2rem;
+    margin: 2rem;
+    margin-bottom: 7rem;
+}
+.cipher-section {
+    
+    width: 60vw;
+    /* padding: 4rem, 0; */
+    /* margin: 2rem 0; */
+    /* margin-bottom: 7rem; */
+     max-width: 60rem;
+    margin: 0 auto 5rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+#ciphertext .line {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+       border: 1px dotted;
+       border-radius: 0.5rem;
+}
+
+
+
+#slots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.slot-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.slot-row:nth-child(2) {
+    padding-left: 1rem;
+}
+
+.slot-row:nth-child(3) {
+    padding-left: 2rem;
+}
+
+option:disabled {
+    color: white;
+}
+
+footer {
+    padding: 4rem, 2rem;
+    padding-bottom: 7rem;
+    font-size: 1.1rem;
+}
+
+footer legend {
+display:inline-block;
+margin-left: 0.3rem;
+}
+
+.footer-content {
+    display:inline-block;
+    /* padding: 0 auto 5rem auto;  */
+    margin-left:2rem;
+    max-width:30vw;
+}
