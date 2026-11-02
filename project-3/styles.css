@@ -45,3 +45,7 @@ body {
 .slot-row:nth-child(3) {
     padding-left: 2rem;
 }
+
+option:disabled {
+    color: white;
+}

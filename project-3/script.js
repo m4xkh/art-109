@@ -1,13 +1,13 @@
 //cipher block elements input list
-const utfKeys = [
+const blockElementLetters = [
     "▀", "▁", "▂", "▃", "▄", "▅", "▆", "▇",
     "█", "▉", "▊", "▋", "▌", "▍", "▎", "▏",
     "▐", "░", "▒", "▔", "▕", "▙", "▚", "▛",
-    "▜", "▟","%"
+    "▜", "▟", "%"
 ];
 
 document.querySelectorAll(".slot").forEach(slot => {
-    utfKeys.forEach(key => slot.add(new Option(key, key)));
+    blockElementLetters.forEach(key => slot.add(new Option(key, key))); //add alphabets to dropdown
     slot.addEventListener("change", () => {
         updateOptions();
         updateCipher();
@@ -16,26 +16,41 @@ document.querySelectorAll(".slot").forEach(slot => {
 
 //changes the cipher text to be what is inputted into the qwerty layout
 function updateCipher() {
-    const mapping = {};
+    const mapping = {}; //create a dictionary function
 
+    //maps out the dictionary. set the value of the dictionary to the translated Letter
     document.querySelectorAll(".slot").forEach(slot => {
         mapping[slot.value] = slot.dataset.letter;
     });
 
-    document.querySelectorAll(".line").forEach(line => {
-        const original = line.dataset.original || line.textContent;
-        line.dataset.original = original;
 
-        line.textContent = [...original].map(char =>
-            mapping[char] || char
-        ).join("");
+//replace the original ciphertext with the defined value in the dictionary
+    document.querySelectorAll(".line").forEach(line => {
+        let result = "";
+
+        for (let char of line.dataset.original) {
+            if (mapping[char]) {
+                result += mapping[char];
+            } else {
+                result += char;
+            }
+        }
+        
+        line.textContent = result;
     });
 }
 
 //disables options to select the same letter twice in the dropdown box
 function updateOptions() {
     const slots = document.querySelectorAll(".slot");
-    const selected = [...slots].map(slot => slot.value);
+    //   const selected = [...slots].map(slot => slot.value);
+
+    //makes an array 
+    const selected = [];
+
+    slots.forEach(slot => {
+        selected.push(slot.value);
+    });
 
     slots.forEach(slot => {
         [...slot.options].forEach(option => {
